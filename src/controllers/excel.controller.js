@@ -94,7 +94,7 @@ export const subirExcel = async (req, res) => {
     // todo ok → insertar
     for (const fila of datosLimpios) {
       await pool.query(
-        `INSERT INTO registro (anio, mes, dni, dias_libres, vacaciones_vencidas, vacaciones_pendientes, vacaciones_truncas, total_vacaciones_acumuladas)
+        `INSERT INTO registro (año, mes, dni, dias_libres, vacaciones_vencidas, vacaciones_pendientes, vacaciones_truncas, total_vacaciones_acumuladas)
          VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           fila["AÑO"],
